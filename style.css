@@ -1,0 +1,183 @@
+header{
+    background-color: black;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 10px;
+    width:100%;
+    font-family: sans-serif;
+}
+nav{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+}
+header nav ul li {
+   list-style: none;
+   display: inline;
+ 
+
+   
+}
+header nav ul li a{
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+     transition: 0.5s all ease;
+}
+nav h2{
+    font-weight: 900;
+     transition: 0.5s all ease;
+}
+body 
+{
+font-family: sans-serif;
+}
+p{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.slogan
+{
+    font-size: 70px;
+    font-weight: bolder;
+}
+.TRAVOL{
+  color: transparent;
+  -webkit-text-stroke: 0.1rem rgb(0, 0, 0);
+  transition: .5s all ease;
+}
+.TRAVOL:hover
+{
+    transition: .5s all ease;
+    color: dodgerblue;
+     -webkit-text-stroke: 0.1rem rgb(21, 59, 183);
+}
+.contanier button
+{
+    text-transform: capitalize;
+    display: flex;
+}
+.homebtn{
+    width: 15%;
+    height: 40px;
+    margin: 20px auto;
+    justify-content: center;
+    align-items: center;
+   background-color: #0056b3; 
+   color: white;
+    transition: 0.5s all ease;
+   font-size: 15px;
+   border-radius: 10px;
+}
+.homebtn:hover{
+    background: #004299;
+   transition: 0.5s all ease;
+   font-size: 20px;
+   cursor:pointer;
+   -webkit-animation: pulse 2s infinite;
+   width: 18%;
+ animation: pulse512 1.5s infinite;
+}
+@keyframes pulse512 {
+ 0% {
+  box-shadow: 0 0 0 0 #05bada66;
+ }
+
+ 70% {
+  box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+ }
+
+ 100% {
+  box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+ }
+}
+a:hover{
+    transition: 0.5s all ease;
+    color:darkred;
+}
+.name:hover
+{
+    transition: 0.5s all ease;
+    color:darkred;
+}
+.searchinpts
+{
+    display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+#typeFilter,#genderFilter,#searchInput{
+    width: 200px;
+    height: 30px;
+    display: inline;
+    justify-content:space-between;
+    align-items: center;
+    border: #004299 solid 2px;
+    border-radius: 10px;
+
+}
+.searchbox
+{
+     width: 200px;
+    height: 30px;
+    display: inline;
+    justify-content:space-between;
+    align-items: center;
+    border: #004299 solid 2px;
+    border-radius: 10px;
+    color: black;
+    gap:.5rem;
+}
+#typeFilter{
+   color: rgb(0, 0, 0);
+   background-color: #ffffff;
+}
+.cards{
+    background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+  width: 220px;
+    flex-direction: column;
+    text-align: center;
+  
+  
+}
+.cards-img{
+   object-fit: cover;
+   width: 180px;
+   height: 300px;
+   border: 3px solid black;
+   display: inline;
+  width: 10%;
+  height: 100%;
+  object-fit: cover;
+}
+.cards-container{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;   
+}
+
+   
+.cards-img{
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.cards:hover{
+    transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
