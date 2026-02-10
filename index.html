@@ -11,7 +11,6 @@
         <nav>
          <h2 class="name">DOMIRIX</h2>
             <ul>
-                
                 <li><a href="index.html">home</a></li>
                 <li><a href="#">about</a></li>
                 <li><a href="#">login</a></li>
@@ -21,9 +20,10 @@
     </div>
 </header>
 <body>
+    
     <div class="contanier">
         <p>LET'S FIND YOUR PERFUME</p>
-        <p class="slogan">EXPLORE PERFUME
+        <p class="slogan">EXPLORE <span class="TRAVOL">YOUR</span> PERFUME
             <BR> WITH <SPan class="TRAVOL">US</SPan></p>
         
         <button class="homebtn" type="submit">Explore collections</button> 
@@ -49,11 +49,7 @@
 
     </div>
 
-
-
   <div class="cards-container">
-    
-
     <div class="cards" data-name="louis vuitton" data-type="designer" data-gender="unisex">
         <img src="pictures/lv.jpg" class="cards-img">
         <p><b>Louis Vuitton</b></p>
@@ -135,8 +131,7 @@
     <div class="cards" data-type="arabic" data-name="designer" data-gender="unisex">
         <img src="pictures/ArabianOud-Logo.png" class="cards-img">
         <p><b>ElArabya For Oud</b></p>
-    </div>
-   
+      </div>
     </div>
 
 </div>
@@ -166,6 +161,7 @@ function filterCards() {
 
 searchInput.addEventListener("keyup", filterCards);
 typeFilter.addEventListener("change", filterCards);
+
 </script>
 </body>
 </html>

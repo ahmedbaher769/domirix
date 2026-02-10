@@ -18,9 +18,6 @@ nav{
 header nav ul li {
    list-style: none;
    display: inline;
- 
-
-   
 }
 header nav ul li a{
     color: white;
@@ -55,6 +52,7 @@ p{
     transition: .5s all ease;
     color: dodgerblue;
      -webkit-text-stroke: 0.1rem rgb(21, 59, 183);
+     cursor: pointer;
 }
 .contanier button
 {
@@ -97,12 +95,12 @@ p{
 }
 a:hover{
     transition: 0.5s all ease;
-    color:darkred;
+    color: dodgerblue;
 }
 .name:hover
 {
     transition: 0.5s all ease;
-    color:darkred;
+    color: dodgerblue;
 }
 .searchinpts
 {
