@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZZARO</title>
+    <link rel="stylesheet" href="style-azzaro.css">
+
+    <header>
+    <div class="content">
+        <nav>
+         <h2 class="name">AZZARO</h2>
+            <ul>
+                <li><a href="C:\Users\NASA\Desktop\learning\index.html">home</a></li>
+                <li><a href="">about</a></li>
+                <li><a href="#">login</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+</head>
+
+<body>
+
+   <div class="searchinpts">
+        <div class="search">
+            <select id="genderFilter">
+                <option value="gender">Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="unisex">Unisex</option>
+            </select>
+
+            <input type="search" id="searchInput" placeholder="Search Your Perfumes">
+        </div>
+    </div>
+
+    <div class="cards-container">
+
+        <div class="cards" data-name="forever wanted absolu" data-type="designer" data-gender="male">
+            <img src="azzaro perfumes/photo_2026-02-24_10-55-59.jpg" class="cards-img">
+            <p><b>forever wanted absolu</b></p>
+        </div>
+        <div class="cards" data-name="forever wanted elixir" data-type="designer" data-gender="male">
+            <img src="azzaro perfumes/photo_2026-02-24_10-56-00.jpg" class="cards-img">
+            <p><b>forever wanted elixir</b></p>
+        </div>
+        <div class="cards" data-name="the most wanted" data-type="designer" data-gender="male">
+            <img src="azzaro perfumes/photo_2026-02-24_10-56-01.jpg" class="cards-img">
+            <p><b>the most wanted</b></p>
+        </div>
+        <div class="cards" data-name="wanted edb" data-type="designer" data-gender="male">
+            <img src="azzaro perfumes/photo_2026-02-24_10-56-02.jpg" class="cards-img">
+            <p><b>wanted edb</b></p>
+        </div>
+        <div class="cards" data-name="wanted" data-type="designer" data-gender="male">
+            <img src="azzaro perfumes/photo_2026-02-24_10-56-03.jpg" class="cards-img">
+            <p><b>wanted</b></p>
+        </div>
+        <div class="cards" data-name="wanted by night" data-type="designer" data-gender="male">
+            <img src="azzaro perfumes/photo_2026-02-24_10-56-04.jpg" class="cards-img">
+            <p><b>wanted by night</b></p>
+        </div>
+        <div class="cards" data-name="the most wanted parfum" data-type="designer" data-gender="male">
+            <img src="azzaro perfumes/photo_2026-02-24_10-56-05.jpg" class="cards-img">
+            <p><b>the most wanted parfum</b></p>
+        </div>
+        <div class="cards" data-name="azzaro pour homme" data-type="designer" data-gender="male">
+            <img src="azzaro perfumes/photo_2026-02-24_10-56-06.jpg" class="cards-img">
+            <p><b>azzaro pour homme</b></p>
+        </div>
+        <div class="cards" data-name="chrome parfum" data-type="designer" data-gender="male">
+            <img src="azzaro perfumes/photo_2026-02-24_10-56-07.jpg" class="cards-img">
+            <p><b>chrome parfum</b></p>
+        </div>
+        <div class="cards" data-name="chrome edp" data-type="designer" data-gender="male">
+            <img src="azzaro perfumes/photo_2026-02-24_10-56-09.jpg" class="cards-img">
+            <p><b>chrome edp</b></p>
+        </div>
+        <div class="cards" data-name="chrome aqua" data-type="designer" data-gender="male">
+            <img src="azzaro perfumes/photo_2026-02-24_10-56-10.jpg" class="cards-img">
+            <p><b>chrome aqua</b></p>
+        </div>
+        <div class="cards" data-name="chrome intense" data-type="designer" data-gender="male">
+            <img src="azzaro perfumes/photo_2026-02-24_10-56-11.jpg" class="cards-img">
+            <p><b>chrome intense</b></p>
+        </div>
+        <div class="cards" data-name="sport edt" data-type="designer" data-gender="male">
+            <img src="azzaro perfumes/photo_2026-02-24_10-56-12.jpg" class="cards-img">
+            <p><b>sport edt</b></p>
+        </div>
+        <div class="cards" data-name="sport" data-type="designer" data-gender="male">
+            <img src="azzaro perfumes/photo_2026-02-24_10-56-13.jpg" class="cards-img">
+            <p><b>sport</b></p>
+        </div>
+
+       
+    </div>
+
+<script>
+const searchInput = document.getElementById("searchInput");
+const genderFilter = document.getElementById("genderFilter");
+const cards = document.querySelectorAll(".cards");
+
+function filterCards() {
+    const searchValue = searchInput.value.toLowerCase();
+    const selectedGender = genderFilter.value;
+
+    cards.forEach(card => {
+        const name = card.getAttribute("data-name").toLowerCase();
+        const gender = card.getAttribute("data-gender");
+
+        const matchName = name.includes(searchValue);
+        const matchGender = selectedGender === "gender" || gender === selectedGender;
+
+        if (matchName && matchGender) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+
+searchInput.addEventListener("input", filterCards);
+genderFilter.addEventListener("change", filterCards);
+</script>
+
+</body>
+</html>

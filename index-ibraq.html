@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ibraq</title>
+    <link rel="stylesheet" href="style-ibraq.css">
+
+    <header>
+    <div class="content">
+        <nav>
+         <h2 class="name">IBRAQ</h2>
+            <ul>
+                <li><a href="C:\Users\NASA\Desktop\learning\index.html">home</a></li>
+                <li><a href="">about</a></li>
+                <li><a href="#">login</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+</head>
+
+<body>
+
+   <div class="searchinpts">
+        <div class="search">
+            <select id="genderFilter">
+                <option value="gender">Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="unisex">Unisex</option>
+            </select>
+
+            <input type="search" id="searchInput" placeholder="Search Your Perfumes">
+        </div>
+    </div>
+
+    <div class="cards-container">
+
+      
+        <div class="cards" data-name="pink diamond sakura" data-type="designer" data-gender="female">
+            <img src="ibraq perfumes/photo_2_2026-02-24_10-55-46.jpg" class="cards-img">
+            <p><b>pink diamond sakura</b></p>
+        </div>
+        <div class="cards" data-name="cullinan diamond iris" data-type="designer" data-gender="unisex">
+            <img src="ibraq perfumes/photo_3_2026-02-24_10-55-46.jpg" class="cards-img">
+            <p><b>cullinan diamond iris</b></p>
+        </div>
+        <div class="cards" data-name="blue diamond aqua" data-type="designer" data-gender="unisex">
+            <img src="ibraq perfumes/photo_4_2026-02-24_10-55-46.jpg" class="cards-img">
+            <p><b>blue diamond aqua</b></p>
+        </div>
+        <div class="cards" data-name="black diamond incence" data-type="designer" data-gender="unisex">
+            <img src="ibraq perfumes/photo_5_2026-02-24_10-55-46.jpg" class="cards-img">
+            <p><b>black diamond incence</b></p>
+        </div>
+        <div class="cards" data-name="black carbon diamond" data-type="designer" data-gender="unisex">
+            <img src="ibraq perfumes/photo_6_2026-02-24_10-55-46.jpg" class="cards-img">
+            <p><b>black carbon diamond</b></p>
+        </div>
+        <div class="cards" data-name="emerald soul diamond" data-type="designer" data-gender="unisex">
+            <img src="ibraq perfumes/photo_7_2026-02-24_10-55-46.jpg" class="cards-img">
+            <p><b>emerald soul diamond</b></p>
+        </div>
+        <div class="cards" data-name="gray pearl diamond" data-type="designer" data-gender="unisex">
+            <img src="ibraq perfumes/photo_8_2026-02-24_10-55-46.jpg" class="cards-img">
+            <p><b>gray pearl diamond</b></p>
+        </div>
+        <div class="cards" data-name="nude coral diamond" data-type="designer" data-gender="unisex">
+            <img src="ibraq perfumes/photo_9_2026-02-24_10-55-46.jpg" class="cards-img">
+            <p><b>nude coral diamond</b></p>
+        </div>
+        <div class="cards" data-name="purble heart diamond" data-type="designer" data-gender="unisex">
+            <img src="ibraq perfumes/photo_10_2026-02-24_10-55-46.jpg" class="cards-img">
+            <p><b>purble heart diamond</b></p>
+        </div>
+        <div class="cards" data-name="white regent diamond" data-type="designer" data-gender="unisex">
+            <img src="ibraq perfumes/photo_11_2026-02-24_10-55-46.jpg" class="cards-img">
+            <p><b>white regent diamond</b></p>
+        </div>
+
+       
+    </div>
+
+<script>
+const searchInput = document.getElementById("searchInput");
+const genderFilter = document.getElementById("genderFilter");
+const cards = document.querySelectorAll(".cards");
+
+function filterCards() {
+    const searchValue = searchInput.value.toLowerCase();
+    const selectedGender = genderFilter.value;
+
+    cards.forEach(card => {
+        const name = card.getAttribute("data-name").toLowerCase();
+        const gender = card.getAttribute("data-gender");
+
+        const matchName = name.includes(searchValue);
+        const matchGender = selectedGender === "gender" || gender === selectedGender;
+
+        if (matchName && matchGender) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+
+searchInput.addEventListener("input", filterCards);
+genderFilter.addEventListener("change", filterCards);
+</script>
+
+</body>
+</html>
